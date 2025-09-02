@@ -1,0 +1,32 @@
+scrape_configs:
+  - name: "demo1"
+    target: "payload.json"
+    static_labels:
+      - name: "country"
+        value: "UK"
+      - name: "city"
+        value: "London"
+    metrics:
+      - name: "windows_cpu_cstate_seconds"
+        description: "cpu time in cstate in seconds"
+      - name: "test1"
+        description: "just a test"
+    labels:
+      - name: "env"
+      - name: "server"
+      
+  - name: "demo2"
+    target: "payload.json"
+    static_labels:
+      - name: "flag"
+        value: "urgent"
+      - name: "region"
+        value: "Norway"
+    metrics:
+      - name: "test2"
+        #0 since not in payload
+        description: "just another test"
+
+    labels:
+      - name: "env"
+
